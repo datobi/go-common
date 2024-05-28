@@ -1,4 +1,4 @@
-module github.com/dispenal/go-common
+module github.com/kholiqdev/go-common
 
 go 1.21.1
 

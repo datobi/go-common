@@ -5,7 +5,7 @@ import (
 	"net"
 	"time"
 
-	common_utils "github.com/dispenal/go-common/utils"
+	common_utils "github.com/kholiqdev/go-common/utils"
 	"github.com/segmentio/kafka-go"
 	"github.com/segmentio/kafka-go/topics"
 )

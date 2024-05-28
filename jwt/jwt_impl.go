@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	common_utils "github.com/dispenal/go-common/utils"
 	"github.com/golang-jwt/jwt/v5"
+	common_utils "github.com/kholiqdev/go-common/utils"
 	"golang.org/x/crypto/chacha20poly1305"
 )
 

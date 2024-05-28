@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"time"
 
-	common_utils "github.com/dispenal/go-common/utils"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
+	common_utils "github.com/kholiqdev/go-common/utils"
 )
 
 func SetupMiddleware(route *chi.Mux, config *common_utils.BaseConfig) {

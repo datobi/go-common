@@ -21,7 +21,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/credentials"
 	"github.com/aws/aws-sdk-go-v2/service/s3"
 	"github.com/aws/aws-sdk-go-v2/service/s3/types"
-	common_utils "github.com/dispenal/go-common/utils"
+	common_utils "github.com/kholiqdev/go-common/utils"
 )
 
 func Init(baseConfig *common_utils.BaseConfig) (*s3.Client, error) {

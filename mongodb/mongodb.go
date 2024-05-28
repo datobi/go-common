@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	common_utils "github.com/dispenal/go-common/utils"
+	common_utils "github.com/kholiqdev/go-common/utils"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )

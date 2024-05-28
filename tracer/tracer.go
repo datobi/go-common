@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	common_utils "github.com/dispenal/go-common/utils"
+	common_utils "github.com/kholiqdev/go-common/utils"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc"
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace"

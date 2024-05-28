@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"time"
 
-	common_utils "github.com/dispenal/go-common/utils"
+	common_utils "github.com/kholiqdev/go-common/utils"
 	"github.com/redis/go-redis/v9"
 	"go.uber.org/zap"
 )

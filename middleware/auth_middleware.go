@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strings"
 
-	jwtMaker "github.com/dispenal/go-common/jwt"
-	common_utils "github.com/dispenal/go-common/utils"
+	jwtMaker "github.com/kholiqdev/go-common/jwt"
+	common_utils "github.com/kholiqdev/go-common/utils"
 	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
 )
 

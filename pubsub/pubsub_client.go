@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"cloud.google.com/go/pubsub"
-	common_utils "github.com/dispenal/go-common/utils"
+	common_utils "github.com/kholiqdev/go-common/utils"
 )
 
 type GooglePubSub interface {

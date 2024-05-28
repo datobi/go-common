@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"context"
 
-	common_utils "github.com/dispenal/go-common/utils"
 	"github.com/elastic/go-elasticsearch/v8/esapi"
+	common_utils "github.com/kholiqdev/go-common/utils"
 	"github.com/pkg/errors"
 )
 

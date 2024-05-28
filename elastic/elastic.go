@@ -8,10 +8,10 @@ import (
 	"os"
 	"time"
 
-	common_utils "github.com/dispenal/go-common/utils"
 	"github.com/elastic/elastic-transport-go/v8/elastictransport"
 	"github.com/elastic/go-elasticsearch/v8"
 	"github.com/elastic/go-elasticsearch/v8/esapi"
+	common_utils "github.com/kholiqdev/go-common/utils"
 	"github.com/pkg/errors"
 )
 

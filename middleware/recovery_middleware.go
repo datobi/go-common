@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/dispenal/go-common/tracer"
-	common_utils "github.com/dispenal/go-common/utils"
+	"github.com/kholiqdev/go-common/tracer"
+	common_utils "github.com/kholiqdev/go-common/utils"
 	"go.opentelemetry.io/otel/codes"
 )
 

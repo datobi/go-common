@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	common_utils "github.com/dispenal/go-common/utils"
 	"github.com/google/uuid"
+	common_utils "github.com/kholiqdev/go-common/utils"
 )
 
 // EventType is the type of any event, used as its unique identifier.

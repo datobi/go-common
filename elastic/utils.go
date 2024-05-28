@@ -3,8 +3,8 @@ package elastic
 import (
 	"context"
 
-	common_utils "github.com/dispenal/go-common/utils"
 	"github.com/elastic/go-elasticsearch/v8"
+	common_utils "github.com/kholiqdev/go-common/utils"
 	"github.com/pkg/errors"
 )
 

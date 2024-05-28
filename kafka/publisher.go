@@ -5,8 +5,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/dispenal/go-common/tracer"
-	common_utils "github.com/dispenal/go-common/utils"
+	"github.com/kholiqdev/go-common/tracer"
+	common_utils "github.com/kholiqdev/go-common/utils"
 	"github.com/segmentio/kafka-go"
 	"github.com/segmentio/kafka-go/protocol"
 	"go.opentelemetry.io/otel/codes"
