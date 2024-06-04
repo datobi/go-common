@@ -74,7 +74,7 @@ func (p *PubSubClientImpl) CreateSubscriptionIfNotExists(ctx context.Context, id
 	})
 }
 
-func (p *PubSubClientImpl) PublishTopics(ctx context.Context, topics []*pubsub.Topic, data any, orderingKey string) error {
+func (p *PubSubClientImpl) PublishTopics(ctx context.Context, topics []*pubsub.Topic, data any, orderingKey string, attributes map[string]string) error {
 	var results []*pubsub.PublishResult
 
 	message, err := common_utils.Marshal(data)
@@ -87,7 +87,9 @@ func (p *PubSubClientImpl) PublishTopics(ctx context.Context, topics []*pubsub.T
 		res := topic.Publish(ctx, &pubsub.Message{
 			Data:        message,
 			OrderingKey: orderingKey,
+			Attributes:  attributes,
 		})
+
 		results = append(results, res)
 	}
 
@@ -128,6 +130,7 @@ func (p *PubSubClientImpl) CheckTopicAndPublish(
 	topicsName []string,
 	orderingKey string,
 	data any,
+	attributes map[string]string,
 ) {
 	if len(topicsName) == 0 {
 		return
@@ -141,6 +144,6 @@ func (p *PubSubClientImpl) CheckTopicAndPublish(
 		}
 		topics[i] = topic
 	}
-	err := p.PublishTopics(ctx, topics, data, orderingKey)
+	err := p.PublishTopics(ctx, topics, data, orderingKey, attributes)
 	common_utils.LogIfError(err)
 }
