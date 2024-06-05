@@ -2,27 +2,48 @@ package common_utils
 
 import (
 	"net/http"
+	"net/url"
 
 	"github.com/PuerkitoBio/goquery"
 )
 
-func Fetch(url string, headers ...map[string]string) (*goquery.Document, error) {
+type Options struct {
+	Headers map[string]string
+	Proxy   string
+}
+
+func Fetch(urlStr string, options Options) (*goquery.Document, error) {
 	// Create a new request using http
-	req, err := http.NewRequest("GET", url, nil)
+	req, err := http.NewRequest("GET", urlStr, nil)
 	if err != nil {
 		return nil, err
 	}
 
 	// Add headers to the request
-	for _, header := range headers {
-		for key, value := range header {
-			req.Header.Add(key, value)
-		}
+	for key, value := range options.Headers {
+		req.Header.Add(key, value)
 	}
 
-	// Create a new http client
-	client := &http.Client{}
+	var transport *http.Transport
 
+	if options.Proxy != "" {
+		proxyURL, err := url.Parse(options.Proxy)
+		if err != nil {
+			return nil, err
+		}
+
+		// Create a custom Transport that uses the proxy
+		transport = &http.Transport{
+			Proxy: http.ProxyURL(proxyURL),
+		}
+	} else {
+		transport = &http.Transport{}
+	}
+
+	// Create a custom http.Client with the Transport
+	client := &http.Client{
+		Transport: transport,
+	}
 	// Send the request via a client
 	res, err := client.Do(req)
 	if err != nil {
